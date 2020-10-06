@@ -53,6 +53,9 @@ class Toplevel1:
     def xss_verify(self):
         self.xss_detection_scroll.delete("1.0",tk.END)
         vulnerability_detector.scan_xss(self.Entry1.get(),self)
+    def logger_verify(self):
+        self.logger_scroll.delete("1.0",tk.END)
+        vulnerability_detector.logger(self)
     def __init__(self, top=None):
         '''This class configures and populates the toplevel window.
            top is the toplevel containing window.'''
@@ -141,7 +144,7 @@ class Toplevel1:
         self.xss_detection.configure(pady="0")
         self.xss_detection.configure(text='''XSS detection''')
 
-        self.logs = tk.Button(top)
+        self.logs = tk.Button(top,command=self.logger_verify)
         self.logs.place(relx=0.732, rely=0.355, height=51, width=244)
         self.logs.configure(activebackground="#ececec")
         self.logs.configure(activeforeground="#000000")
