@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2020 at 05:51 PM
+-- Generation Time: Oct 07, 2020 at 09:57 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -30,20 +30,21 @@ SET time_zone = "+00:00";
 CREATE TABLE `logger` (
   `url` varchar(200) NOT NULL,
   `flag` tinyint(4) NOT NULL,
-  `details` varchar(500) NOT NULL
+  `details` varchar(500) NOT NULL,
+  `timestamp` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `logger`
 --
 
-INSERT INTO `logger` (`url`, `flag`, `details`) VALUES
-('https://web.whatsapp.com/', 0, 'No sql injection'),
-('https://web.whatsapp.com/', 1, 'No XSS vulnerablity'),
-('https://web.whatsapp.com/', 0, 'No sql injection'),
-('https://web.whatsapp.com/', 1, 'No XSS vulnerablity'),
-('https://github.com/dc480506/css-assignment-w3af/search', 0, 'No sql injection'),
-('https://github.com/dc480506/CSS-Assignment-W3AF/blob/master/vulnerability_detector.py', 1, 'No XSS vulnerablity');
+INSERT INTO `logger` (`url`, `flag`, `details`, `timestamp`) VALUES
+('https://xss-game.appspot.com/level1/frame', 1, '{\'action\': \'\', \'method\': \'get\', \'inputs\': [{\'type\': \'text\', \'name\': \'query\', \'value\': \"<Script>alert(\'hi\')</scripT>\"}, {\'type\': \'submit\', \'name\': None, \'value\': \'Search\'}], \'buttons\': []}', '2020-10-06 22:19:36'),
+('https://web.whatsapp.com/', 0, 'No sql injection', '2020-10-06 22:19:54'),
+('https://web.whatsapp.com/', 1, 'No XSS vulnerablity', '2020-10-06 22:19:57'),
+('https://github.com/dc480506/CSS-Assignment-W3AF', 1, 'No XSS vulnerablity', '2020-10-06 22:20:20'),
+('https://github.com/users/set_protocol?protocol_type=clone', 0, 'No sql injection', '2020-10-06 22:20:25'),
+('https://xss-game.appspot.com/level1/frame', 1, '{\'action\': \'\', \'method\': \'get\', \'inputs\': [{\'type\': \'text\', \'name\': \'query\', \'value\': \"<Script>alert(\'hi\')</scripT>\"}, {\'type\': \'submit\', \'name\': None, \'value\': \'Search\'}], \'buttons\': []}', '2020-10-06 22:25:57');
 
 -- --------------------------------------------------------
 
