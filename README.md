@@ -14,12 +14,18 @@ This will run the code for the particular page of the provided website and repor
 It will also return the location and function where a possibility of attack is detected
 if no possibility of vulnerabilities are detected it will return No SQL Injection detected
 
+![SQL Injection](app/gifs/sql_injection.gif)
+
 Cross Site Scripting
 Once the website link has been entered, the possibility of Cross Site Scripting can be checked by clicking on the XSS box. 
 This will run the code for the particular page of the provided website and report if any possible vulnerabilities present.
 It will also return the location and function where a possibility of attack is detected
 If no possibility of vulnerabilities are detected it will return XSS vulnerability not found
 
+![XSS Injection](app/gifs/xss-injection.gif)
+
 3. Logger 	
 Logger keeps a track of all the activities performed by the user. 
-It keeps track of the URL entered, type of vulnerability tested, presence or absence of the vulnerability, the output of the performed action, Location and function of the threat detected and date and time of the operation. 
+It keeps track of the URL entered, type of vulnerability tested, presence or absence of the vulnerability, the output of the performed action, Location and function of the threat detected and date and time of the operation.
+
+![Logger](app/gifs/logger.gif)
